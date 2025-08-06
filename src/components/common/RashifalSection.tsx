@@ -411,31 +411,32 @@ export default function RashifalSection() {
         </div>
 
         {/* Zodiac Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
           {rasifalData.map((rashi) => (
             <Dialog key={rashi.rashi}>
               <DialogTrigger asChild>
                 <Card className="cursor-pointer transition-all duration-300 hover:shadow-2xl hover:scale-105 border-2 border-amber-200 hover:border-amber-400 bg-gradient-to-br from-white to-amber-50 group">
-                  <CardHeader className="text-center pb-4">
-                    <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-amber-100 to-orange-200 flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
+                  <div className="flex  p-4 gap-4">
+                    <div className="w-12 h-12 flex-shrink-0 rounded-full bg-gradient-to-br from-amber-100 to-orange-200 flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
                       {getRashiIcon(rashi.rashi)}
                     </div>
-                    <CardTitle className="text-3xl font-bold text-amber-900 font-serif mb-2">
-                      {rashi.name}
-                    </CardTitle>
-                   
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-base text-amber-800 line-clamp-4 leading-relaxed text-center">
-                      {rashi.description}
-                    </CardDescription>
-                    <div className="mt-6 text-center">
-                      <span className="text-sm text-amber-600 font-medium bg-amber-100 px-3 py-1 rounded-full">
-                        विस्तार से देखें →
-                      </span>
+                    <div className="flex-1 min-w-0">
+                     
+                      <CardDescription className="text-sm text-amber-800 line-clamp-3 leading-relaxed">
+                         <span className="text-base font-bold text-amber-900 font-serif mr-2 ">
+                        {rashi.name}
+                      </span>{rashi.description}
+                      </CardDescription>
+                      <div className="mt-3">
+                        <span className="text-xs text-amber-600 font-medium bg-amber-100 px-2 py-1 rounded-full">
+                          विस्तार से देखें →
+                        </span>
+                      </div>
                     </div>
-                  </CardContent>
+                  </div>
                 </Card>
+
+
               </DialogTrigger>
 
               <DialogContent className="overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-200">

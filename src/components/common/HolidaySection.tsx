@@ -35,27 +35,51 @@ export default function HolidaySection() {
     "text-fuchsia-600",
   ];
 
+  // Corresponding background colors
+  const bgColors = [
+    "bg-red-600",
+    "bg-blue-600",
+    "bg-green-600",
+    "bg-purple-600",
+    "bg-orange-600",
+    "bg-pink-600",
+    "bg-indigo-600",
+    "bg-teal-600",
+    "bg-amber-600",
+    "bg-rose-600",
+    "bg-emerald-600",
+    "bg-violet-600",
+    "bg-cyan-600",
+    "bg-lime-600",
+    "bg-fuchsia-600",
+  ];
+
   return (
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-6xl mx-auto ">
         <h1 className="text-2xl sm:text-3xl font-bold text-center mb-6 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-          Jharkhand Holidays 2025
+          Festivals 2025
         </h1>
 
-        <div className="text-sm sm:text-base leading-relaxed bg-white/70 backdrop-blur-sm rounded-lg p-6 shadow-lg">
+        <div className="grid grid-cols-2 lg:grid-cols-6 border mx-auto w-fit ">
           {sortedHolidays.map((holiday, index) => {
             const colorClass = classicColors[index % classicColors.length];
+            const bgColorClass = bgColors[index % bgColors.length];
             return (
-              <span key={`${holiday.date}-${index}`}>
-                <span className={`font-bold ${colorClass}`}>
-                  {formatDate(holiday.date)}
-                </span>{" "}
-                <span className={`font-medium ${colorClass}`}>
-                  {holiday.title}
-                </span>
-                {index < sortedHolidays.length - 1 && (
-                  <span className="text-gray-400 mx-1">•</span>
-                )}
-              </span>
+              <div 
+                key={`${holiday.date}-${index}`}
+                className="flex items-start justify-center px-1.5 space-x-2 py-1.5 border"
+              >
+                <div className={`w-2 h-2 rounded-full ${bgColorClass} mt-1 flex-shrink-0`}></div>
+                <div className="flex-1 min-w-0">
+                  
+                  <div className={`text-sm  font-semibold ${colorClass} leading-relaxed`}>
+                    {holiday.title}
+                  </div>
+                  <div className={`text-sm  ${colorClass}`}>
+                    {formatDate(holiday.date)}
+                  </div>
+                </div>
+              </div>
             );
           })}
         </div>

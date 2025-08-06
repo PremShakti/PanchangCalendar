@@ -59,9 +59,9 @@ const CalanderSheet: React.FC<PageProps> = async ({ params, monthData }) => {
     <main className="font-devanagari space-y-10 bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-100 ">
       <div className="w-full md:container">
         {/* Header Section */}
-        <div className="relative px-4 py-6 md:py-8 lg:py-10 bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 shadow-lg">
+        <div className="relative px-4 py-3 md:py-8 lg:py-10 bg-gradient-to-br from-amber-70 via-orange-50 to-red-50 shadow-lg">
           {/* Subtle decorative background for larger screens only */}
-          <div className="hidden md:block absolute inset-0 opacity-5 overflow-hidden">
+          <div className="hidden md:block absolute inset-0 opacity-50 overflow-hidden">
             <div className="absolute top-4 left-8 text-6xl">🕉️</div>
             <div className="absolute top-6 right-12 text-4xl">🪔</div>
             <div className="absolute bottom-4 left-1/4 text-3xl">🌺</div>
@@ -69,16 +69,16 @@ const CalanderSheet: React.FC<PageProps> = async ({ params, monthData }) => {
           </div>
 
           <div className="relative z-10 text-center">
-            <div className="flex items-center justify-center gap-3 mb-2">
+            <div className="flex items-center justify-center gap-4 ">
               <Calendar className="h-6 w-6 md:h-8 md:w-8 text-orange-600" />
+              <h1 className="text-3xl pt-4 md:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-orange-700 via-red-600 to-orange-800 bg-clip-text text-transparent tracking-wide ">
+                भक्ति कैलेंडर
+              </h1>
+
               <div className="h-6 w-6 md:h-8 md:w-8 rounded-full bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center">
                 <div className="h-3 w-3 md:h-4 md:w-4 rounded-full bg-white opacity-80"></div>
               </div>
             </div>
-
-            <h1 className="text-3xl pt-4 md:text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-orange-700 via-red-600 to-orange-800 bg-clip-text text-transparent tracking-wide mb-2">
-              भक्ति कैलेंडर
-            </h1>
 
             <p className="text-orange-600 font-semibold tracking-wider text-sm md:text-base lg:text-lg">
               BHAKTI CALENDAR
@@ -93,11 +93,15 @@ const CalanderSheet: React.FC<PageProps> = async ({ params, monthData }) => {
             {/* Month Selector Section - Most Important on Mobile */}
             <div className="bg-gradient-to-r from-amber-400 to-yellow-400 px-6 py-6 text-center">
               <div className="space-y-3  flce flex-col items-center">
-                <MonthSelector
-                  className=" w-full"
-                  triggerClassName=" max-w-xs overflow-hidden mx-auto bg-white/90 backdrop-blur-sm text-amber-900 border-2 border-amber-600/30 rounded-xl font-bold text-lg shadow-lg hover:bg-white transition-all duration-200"
-                  contentClassName="text-base bg-white/95 backdrop-blur-sm"
-                />
+                <div className="flex items-center gap-2">
+                  <PreviousMonthButton className=" bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 w-8 h-8 rounded-full border-2 border-white/40 transition-all duration-200 hover:scale-105 mx-auto" />
+                  <MonthSelector
+                    className=" w-full"
+                    triggerClassName=" max-w-xs overflow-hidden mx-auto bg-white/90 backdrop-blur-sm text-amber-900 border-2 border-amber-600/30 rounded-xl font-bold text-base shadow-lg hover:bg-white transition-all duration-200"
+                    contentClassName="text-base bg-white/95 backdrop-blur-sm"
+                  />
+                  <NextMonthButton className=" bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 w-8 h-8 rounded-full border-2 border-white/40 transition-all duration-200 hover:scale-105 mx-auto" />
+                </div>
                 <p className="text-2xl font-bold text-amber-900 drop-shadow-sm">
                   2025
                 </p>
@@ -109,8 +113,7 @@ const CalanderSheet: React.FC<PageProps> = async ({ params, monthData }) => {
               {/* Previous Month */}
               <div className="flex-1 bg-gradient-to-br from-rose-500 to-red-600 text-white py-6 px-4 relative">
                 <div className="text-center">
-                  <PreviousMonthButton className="mb-3 bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 w-12 h-12 rounded-full border-2 border-white/40 transition-all duration-200 hover:scale-105 mx-auto" />
-                  <p className="font-bold text-base mb-1">पौष-चैत्र</p>
+                  <p className=" text-base mb-1">पौष-चैत्र</p>
                   <p className="text-sm opacity-90">हिंदू महीने</p>
                 </div>
               </div>
@@ -118,9 +121,8 @@ const CalanderSheet: React.FC<PageProps> = async ({ params, monthData }) => {
               {/* Next Month */}
               <div className="flex-1 bg-gradient-to-br from-rose-500 to-red-600 text-white py-6 px-4 relative border-l border-white/20">
                 <div className="text-center">
-                  <NextMonthButton className="mb-3 bg-white/20 backdrop-blur-sm text-white hover:bg-white/30 w-12 h-12 rounded-full border-2 border-white/40 transition-all duration-200 hover:scale-105 mx-auto" />
-                  <p className="font-bold text-base mb-1">विक्रम संवत्</p>
-                  <p className="text-sm font-semibold">2081-2082</p>
+                  <p className=" text-base mb-1">विक्रम संवत्</p>
+                  <p className="text-sm ">2081-2082</p>
                 </div>
               </div>
             </div>
@@ -173,7 +175,7 @@ const CalanderSheet: React.FC<PageProps> = async ({ params, monthData }) => {
                 <p className="font-bold text-lg lg:text-xl mb-1">
                   विक्रम संवत्
                 </p>
-                <p className="text-lg lg:text-xl font-bold">2081-2082</p>
+                <p className="text-lg lg:text-xl ">2081-2082</p>
               </div>
 
               <div className="absolute bottom-0 right-0 w-8 h-8 bg-white/10 transform rotate-45 translate-x-4 translate-y-4"></div>

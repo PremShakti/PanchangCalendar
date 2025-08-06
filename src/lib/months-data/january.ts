@@ -152,7 +152,7 @@ export const january = [
     nakshatra: "अश्विनी",
     sunrise: "07:14 AM",
     sunset: "05:40 PM",
-    event: true,
+    event: false,
     url: "",
   },
   {
@@ -230,7 +230,7 @@ export const january = [
     nakshatra: "पुनर्वसु",
     sunrise: "07:14 AM",
     sunset: "05:44 PM",
-    event: true,
+    event: false,
     url: "",
   },
   {
@@ -347,7 +347,7 @@ export const january = [
     nakshatra: "विशाखा",
     sunrise: "07:13 AM",
     sunset: "05:51 PM",
-    event: true,
+    event: false,
     url: "",
   },
   {
