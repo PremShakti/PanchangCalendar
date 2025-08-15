@@ -8,57 +8,97 @@ body {
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
+    /* Classic Hindu/Indian inspired color palette */
+    
+    /* Sacred Orange/Saffron Colors */
+    --saffron-light: 39 100% 85%;        /* Light saffron background */
+    --saffron: 39 100% 70%;              /* Main saffron color */
+    --saffron-dark: 39 100% 55%;         /* Deep saffron */
+    --saffron-darker: 39 100% 40%;       /* Darker saffron */
+    
+    /* Sacred Red Colors */
+    --kumkum-light: 0 85% 85%;           /* Light red/pink */
+    --kumkum: 0 85% 65%;                 /* Kumkum red */
+    --kumkum-dark: 0 85% 50%;            /* Deep kumkum */
+    --sindoor: 14 100% 55%;              /* Sindoor red-orange */
+    
+    /* Golden/Amber Colors */
+    --gold-light: 45 100% 85%;           /* Light gold */
+    --gold: 45 100% 65%;                 /* Pure gold */
+    --gold-dark: 45 100% 50%;            /* Deep gold */
+    --turmeric: 45 95% 70%;              /* Turmeric yellow */
+    
+    /* Earth Tones */
+    --earth-light: 30 25% 90%;           /* Light earth */
+    --earth: 30 25% 75%;                 /* Earth tone */
+    --earth-dark: 30 25% 60%;            /* Dark earth */
+    --sandalwood: 35 30% 85%;            /* Sandalwood beige */
+    
+    /* Spiritual Colors */
+    --lotus-pink: 340 75% 85%;           /* Light lotus pink */
+    --lotus: 340 75% 70%;                /* Lotus pink */
+    --peacock-blue: 195 85% 55%;         /* Krishna blue */
+    --tulsi-green: 140 60% 45%;          /* Sacred basil green */
+    
+    /* Neutral Sacred Colors */
+    --sacred-white: 0 0% 98%;            /* Pure white */
+    --sacred-cream: 45 25% 95%;          /* Cream white */
+    --sacred-grey: 0 0% 85%;             /* Light grey */
+    --charcoal: 0 0% 25%;                /* Dark charcoal */
+    
+    /* Updated shadcn/ui variables with Indian theme */
+    --background: var(--sacred-cream);
+    --foreground: var(--charcoal);
+    --card: var(--sacred-white);
+    --card-foreground: var(--charcoal);
+    --popover: var(--sacred-white);
+    --popover-foreground: var(--charcoal);
+    --primary: var(--saffron-dark);
+    --primary-foreground: var(--sacred-white);
+    --secondary: var(--sandalwood);
+    --secondary-foreground: var(--charcoal);
+    --muted: var(--earth-light);
+    --muted-foreground: var(--earth-dark);
+    --accent: var(--gold-light);
+    --accent-foreground: var(--charcoal);
+    --destructive: var(--kumkum);
+    --destructive-foreground: var(--sacred-white);
+    --border: var(--sacred-grey);
+    --input: var(--sacred-grey);
+    --ring: var(--saffron);
+    --chart-1: var(--saffron);
+    --chart-2: var(--kumkum);
+    --chart-3: var(--gold);
+    --chart-4: var(--peacock-blue);
+    --chart-5: var(--tulsi-green);
     --radius: 0.5rem;
   }
   .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
+    /* Dark theme with warm Indian colors */
+    --background: var(--charcoal);
+    --foreground: var(--sacred-cream);
+    --card: 0 0% 15%;
+    --card-foreground: var(--sacred-cream);
+    --popover: 0 0% 15%;
+    --popover-foreground: var(--sacred-cream);
+    --primary: var(--saffron);
+    --primary-foreground: var(--charcoal);
+    --secondary: var(--earth-dark);
+    --secondary-foreground: var(--sacred-cream);
+    --muted: var(--earth-dark);
+    --muted-foreground: var(--earth-light);
+    --accent: var(--gold-dark);
+    --accent-foreground: var(--sacred-cream);
+    --destructive: var(--kumkum-dark);
+    --destructive-foreground: var(--sacred-cream);
+    --border: var(--earth-dark);
+    --input: var(--earth-dark);
+    --ring: var(--saffron-light);
+    --chart-1: var(--saffron-light);
+    --chart-2: var(--kumkum-light);
+    --chart-3: var(--gold-light);
+    --chart-4: var(--peacock-blue);
+    --chart-5: var(--tulsi-green);
   }
 }
 
@@ -68,5 +108,147 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Custom utility classes for Indian/Hindu theme colors */
+@layer utilities {
+  /* Saffron/Orange utilities */
+  .bg-saffron-light { background-color: hsl(var(--saffron-light)); }
+  .bg-saffron { background-color: hsl(var(--saffron)); }
+  .bg-saffron-dark { background-color: hsl(var(--saffron-dark)); }
+  .bg-saffron-darker { background-color: hsl(var(--saffron-darker)); }
+  
+  .text-saffron-light { color: hsl(var(--saffron-light)); }
+  .text-saffron { color: hsl(var(--saffron)); }
+  .text-saffron-dark { color: hsl(var(--saffron-dark)); }
+  .text-saffron-darker { color: hsl(var(--saffron-darker)); }
+  
+  .border-saffron-light { border-color: hsl(var(--saffron-light)); }
+  .border-saffron { border-color: hsl(var(--saffron)); }
+  .border-saffron-dark { border-color: hsl(var(--saffron-dark)); }
+  
+  /* Kumkum/Red utilities */
+  .bg-kumkum-light { background-color: hsl(var(--kumkum-light)); }
+  .bg-kumkum { background-color: hsl(var(--kumkum)); }
+  .bg-kumkum-dark { background-color: hsl(var(--kumkum-dark)); }
+  .bg-sindoor { background-color: hsl(var(--sindoor)); }
+  
+  .text-kumkum-light { color: hsl(var(--kumkum-light)); }
+  .text-kumkum { color: hsl(var(--kumkum)); }
+  .text-kumkum-dark { color: hsl(var(--kumkum-dark)); }
+  .text-sindoor { color: hsl(var(--sindoor)); }
+  
+  .border-kumkum-light { border-color: hsl(var(--kumkum-light)); }
+  .border-kumkum { border-color: hsl(var(--kumkum)); }
+  .border-kumkum-dark { border-color: hsl(var(--kumkum-dark)); }
+  
+  /* Gold utilities */
+  .bg-gold-light { background-color: hsl(var(--gold-light)); }
+  .bg-gold { background-color: hsl(var(--gold)); }
+  .bg-gold-dark { background-color: hsl(var(--gold-dark)); }
+  .bg-turmeric { background-color: hsl(var(--turmeric)); }
+  
+  .text-gold-light { color: hsl(var(--gold-light)); }
+  .text-gold { color: hsl(var(--gold)); }
+  .text-gold-dark { color: hsl(var(--gold-dark)); }
+  .text-turmeric { color: hsl(var(--turmeric)); }
+  
+  .border-gold-light { border-color: hsl(var(--gold-light)); }
+  .border-gold { border-color: hsl(var(--gold)); }
+  .border-gold-dark { border-color: hsl(var(--gold-dark)); }
+  
+  /* Earth tone utilities */
+  .bg-earth-light { background-color: hsl(var(--earth-light)); }
+  .bg-earth { background-color: hsl(var(--earth)); }
+  .bg-earth-dark { background-color: hsl(var(--earth-dark)); }
+  .bg-sandalwood { background-color: hsl(var(--sandalwood)); }
+  
+  .text-earth-light { color: hsl(var(--earth-light)); }
+  .text-earth { color: hsl(var(--earth)); }
+  .text-earth-dark { color: hsl(var(--earth-dark)); }
+  .text-sandalwood { color: hsl(var(--sandalwood)); }
+  
+  /* Spiritual color utilities */
+  .bg-lotus-pink { background-color: hsl(var(--lotus-pink)); }
+  .bg-lotus { background-color: hsl(var(--lotus)); }
+  .bg-peacock-blue { background-color: hsl(var(--peacock-blue)); }
+  .bg-tulsi-green { background-color: hsl(var(--tulsi-green)); }
+  
+  .text-lotus-pink { color: hsl(var(--lotus-pink)); }
+  .text-lotus { color: hsl(var(--lotus)); }
+  .text-peacock-blue { color: hsl(var(--peacock-blue)); }
+  .text-tulsi-green { color: hsl(var(--tulsi-green)); }
+  
+  /* Sacred neutral utilities */
+  .bg-sacred-white { background-color: hsl(var(--sacred-white)); }
+  .bg-sacred-cream { background-color: hsl(var(--sacred-cream)); }
+  .bg-sacred-grey { background-color: hsl(var(--sacred-grey)); }
+  .bg-charcoal { background-color: hsl(var(--charcoal)); }
+  
+  .text-sacred-white { color: hsl(var(--sacred-white)); }
+  .text-sacred-cream { color: hsl(var(--sacred-cream)); }
+  .text-sacred-grey { color: hsl(var(--sacred-grey)); }
+  .text-charcoal { color: hsl(var(--charcoal)); }
+  
+  /* Gradient utilities for Indian theme */
+  .gradient-saffron { 
+    background: linear-gradient(135deg, hsl(var(--saffron-light)), hsl(var(--saffron-dark))); 
+  }
+  .gradient-kumkum { 
+    background: linear-gradient(135deg, hsl(var(--kumkum-light)), hsl(var(--kumkum-dark))); 
+  }
+  .gradient-gold { 
+    background: linear-gradient(135deg, hsl(var(--gold-light)), hsl(var(--gold-dark))); 
+  }
+  .gradient-sacred { 
+    background: linear-gradient(135deg, hsl(var(--saffron-light)), hsl(var(--kumkum-light)), hsl(var(--gold-light))); 
+  }
+  .gradient-sunset { 
+    background: linear-gradient(135deg, hsl(var(--saffron)), hsl(var(--sindoor)), hsl(var(--kumkum))); 
+  }
+  .gradient-earth { 
+    background: linear-gradient(135deg, hsl(var(--earth-light)), hsl(var(--sandalwood)), hsl(var(--earth))); 
+  }
+  
+  /* Day-specific color utilities for calendar */
+  .sunday-theme { 
+    background: linear-gradient(to top, hsl(var(--saffron-light)), transparent); 
+  }
+  .monday-theme { 
+    background: linear-gradient(to top, hsl(var(--peacock-blue)), transparent); 
+  }
+  .tuesday-theme { 
+    background: linear-gradient(to top, hsl(var(--sindoor)), transparent); 
+  }
+  .wednesday-theme { 
+    background: linear-gradient(to top, hsl(var(--tulsi-green)), transparent); 
+  }
+  .thursday-theme { 
+    background: linear-gradient(to top, hsl(var(--gold)), transparent); 
+  }
+  .friday-theme { 
+    background: linear-gradient(to top, hsl(var(--lotus)), transparent); 
+  }
+  .saturday-theme { 
+    background: linear-gradient(to top, hsl(var(--charcoal)), transparent); 
+  }
+  
+  /* Event and festival specific colors */
+  .festival-bg { 
+    background: linear-gradient(135deg, hsl(var(--saffron-light)), hsl(var(--gold-light))); 
+  }
+  .auspicious-bg { 
+    background: linear-gradient(135deg, hsl(var(--gold-light)), hsl(var(--turmeric))); 
+  }
+  .sacred-bg { 
+    background: linear-gradient(135deg, hsl(var(--sacred-cream)), hsl(var(--sandalwood))); 
+  }
+}
+
+/* Font utilities for Devanagari */
+@layer utilities {
+  .font-devanagari {
+    font-family: var(--font-noto-sans-devanagari), 'Noto Sans Devanagari', sans-serif;
   }
 }

@@ -20,6 +20,7 @@ export default {
         },
       },
       colors: {
+        // Existing shadcn/ui colors
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
@@ -60,6 +61,48 @@ export default {
           "4": "hsl(var(--chart-4))",
           "5": "hsl(var(--chart-5))",
         },
+        
+        // Indian/Hindu themed colors
+        saffron: {
+          light: "hsl(var(--saffron-light))",
+          DEFAULT: "hsl(var(--saffron))",
+          dark: "hsl(var(--saffron-dark))",
+          darker: "hsl(var(--saffron-darker))",
+        },
+        kumkum: {
+          light: "hsl(var(--kumkum-light))",
+          DEFAULT: "hsl(var(--kumkum))",
+          dark: "hsl(var(--kumkum-dark))",
+        },
+        sindoor: "hsl(var(--sindoor))",
+        gold: {
+          light: "hsl(var(--gold-light))",
+          DEFAULT: "hsl(var(--gold))",
+          dark: "hsl(var(--gold-dark))",
+        },
+        turmeric: "hsl(var(--turmeric))",
+        earth: {
+          light: "hsl(var(--earth-light))",
+          DEFAULT: "hsl(var(--earth))",
+          dark: "hsl(var(--earth-dark))",
+        },
+        sandalwood: "hsl(var(--sandalwood))",
+        lotus: {
+          pink: "hsl(var(--lotus-pink))",
+          DEFAULT: "hsl(var(--lotus))",
+        },
+        peacock: {
+          blue: "hsl(var(--peacock-blue))",
+        },
+        tulsi: {
+          green: "hsl(var(--tulsi-green))",
+        },
+        sacred: {
+          white: "hsl(var(--sacred-white))",
+          cream: "hsl(var(--sacred-cream))",
+          grey: "hsl(var(--sacred-grey))",
+        },
+        charcoal: "hsl(var(--charcoal))",
       },
       borderRadius: {
         lg: "var(--radius)",

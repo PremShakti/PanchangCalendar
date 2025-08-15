@@ -94,7 +94,7 @@ export function LoginForm({
     <Form {...form}>
       <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
         {error && (
-          <div className="p-3 text-sm text-red-600 bg-red-50 border border-red-200 rounded-md">
+          <div className="p-3 text-sm text-kumkum-dark bg-kumkum-light border border-kumkum rounded-md">
             {error}
           </div>
         )}
@@ -133,9 +133,9 @@ export function LoginForm({
                     disabled={isLoading}
                   >
                     {showPassword ? (
-                      <EyeOff className="h-4 w-4 text-gray-400" />
+                      <EyeOff className="h-4 w-4 text-earth-dark" />
                     ) : (
-                      <Eye className="h-4 w-4 text-gray-400" />
+                      <Eye className="h-4 w-4 text-earth-dark" />
                     )}
                   </Button>
                 </div>

@@ -16,48 +16,42 @@ export default function HolidaySection() {
     });
   };
 
-  // Classic color palette
+  // Classic Indian color palette
   const classicColors = [
-    "text-red-600",
-    "text-blue-600",
-    "text-green-600",
-    "text-purple-600",
-    "text-orange-600",
-    "text-pink-600",
-    "text-indigo-600",
-    "text-teal-600",
-    "text-amber-600",
-    "text-rose-600",
-    "text-emerald-600",
-    "text-violet-600",
-    "text-cyan-600",
-    "text-lime-600",
-    "text-fuchsia-600",
+    "text-saffron-dark",
+    "text-kumkum",
+    "text-gold-dark",
+    "text-peacock-blue",
+    "text-tulsi-green",
+    "text-lotus",
+    "text-sindoor",
+    "text-charcoal",
+    "text-saffron",
+    "text-kumkum-dark",
+    "text-gold",
+    "text-earth-dark",
   ];
 
   // Corresponding background colors
   const bgColors = [
-    "bg-red-600",
-    "bg-blue-600",
-    "bg-green-600",
-    "bg-purple-600",
-    "bg-orange-600",
-    "bg-pink-600",
-    "bg-indigo-600",
-    "bg-teal-600",
-    "bg-amber-600",
-    "bg-rose-600",
-    "bg-emerald-600",
-    "bg-violet-600",
-    "bg-cyan-600",
-    "bg-lime-600",
-    "bg-fuchsia-600",
+    "bg-saffron-dark",
+    "bg-kumkum",
+    "bg-gold-dark",
+    "bg-peacock-blue",
+    "bg-tulsi-green",
+    "bg-lotus",
+    "bg-sindoor",
+    "bg-charcoal",
+    "bg-saffron",
+    "bg-kumkum-dark",
+    "bg-gold",
+    "bg-earth-dark",
   ];
 
   return (
       <div className="max-w-6xl mx-auto ">
-        <h1 className="text-2xl sm:text-3xl font-bold text-center mb-6 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-          Festivals 2025
+        <h1 className="text-2xl sm:text-3xl font-bold text-center mb-6 bg-gradient-to-r from-saffron-darker via-kumkum-dark to-sindoor bg-clip-text text-transparent font-devanagari">
+          त्यौहार 2025 • Festivals 2025
         </h1>
 
         <div className="grid grid-cols-2 lg:grid-cols-6 border mx-auto w-fit ">

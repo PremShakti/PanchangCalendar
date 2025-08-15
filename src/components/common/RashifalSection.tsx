@@ -311,31 +311,31 @@ const rasifalData = [
 const getRashiIcon = (rashi: string) => {
   switch (rashi) {
     case "mesha":
-      return <Flame className="w-8 h-8 text-red-600" />;
+      return <Flame className="w-8 h-8 text-sindoor" />;
     case "vrishabha":
-      return <Mountain className="w-8 h-8 text-green-700" />;
+      return <Mountain className="w-8 h-8 text-tulsi-green" />;
     case "mithuna":
-      return <Wind className="w-8 h-8 text-blue-600" />;
+      return <Wind className="w-8 h-8 text-peacock-blue" />;
     case "karka":
-      return <Waves className="w-8 h-8 text-blue-500" />;
+      return <Waves className="w-8 h-8 text-peacock-blue" />;
     case "simha":
-      return <Crown className="w-8 h-8 text-yellow-600" />;
+      return <Crown className="w-8 h-8 text-gold-dark" />;
     case "kanya":
-      return <Leaf className="w-8 h-8 text-green-600" />;
+      return <Leaf className="w-8 h-8 text-tulsi-green" />;
     case "tula":
-      return <Scale className="w-8 h-8 text-purple-600" />;
+      return <Scale className="w-8 h-8 text-lotus" />;
     case "vrishchika":
-      return <Eye className="w-8 h-8 text-red-700" />;
+      return <Eye className="w-8 h-8 text-kumkum-dark" />;
     case "dhanu":
-      return <Target className="w-8 h-8 text-orange-600" />;
+      return <Target className="w-8 h-8 text-saffron-dark" />;
     case "makara":
-      return <Shield className="w-8 h-8 text-gray-700" />;
+      return <Shield className="w-8 h-8 text-earth-dark" />;
     case "kumbha":
-      return <Droplets className="w-8 h-8 text-cyan-600" />;
+      return <Droplets className="w-8 h-8 text-peacock-blue" />;
     case "meena":
-      return <Waves className="w-8 h-8 text-teal-600" />;
+      return <Waves className="w-8 h-8 text-peacock-blue" />;
     default:
-      return <Star className="w-8 h-8 text-amber-600" />;
+      return <Star className="w-8 h-8 text-gold" />;
   }
 };
 
@@ -389,24 +389,24 @@ const getTabLabel = (tab: string) => {
 
 export default function RashifalSection() {
   return (
-    <div className="min-h-screen  p-4">
+    <div className="min-h-screen bg-sacred-cream p-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 mb-6 shadow-lg">
-            <Star className="w-10 h-10 text-white fill-current" />
+          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full gradient-gold mb-6 shadow-lg">
+            <Star className="w-10 h-10 text-charcoal fill-current" />
           </div>
-          <h1 className="text-2xl md:text-4xl font-bold text-amber-900 mb-4 font-serif">
+          <h1 className="text-2xl md:text-4xl font-bold text-saffron-darker mb-4 font-devanagari">
             राशिफल जनवरी 2025
           </h1>
-          <p className="text-xl text-amber-800 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-earth-dark max-w-3xl mx-auto leading-relaxed">
             सभी 12 राशियों के लिए विस्तृत भविष्यफल और जीवन के विभिन्न क्षेत्रों
             की जानकारी
           </p>
           <div className="flex items-center justify-center gap-2 mt-6">
-            <div className="w-2 h-2 rounded-full bg-amber-400"></div>
-            <div className="w-3 h-3 rounded-full bg-amber-500"></div>
-            <div className="w-2 h-2 rounded-full bg-amber-400"></div>
+            <div className="w-2 h-2 rounded-full bg-saffron"></div>
+            <div className="w-3 h-3 rounded-full bg-gold"></div>
+            <div className="w-2 h-2 rounded-full bg-saffron"></div>
           </div>
         </div>
 
@@ -415,20 +415,20 @@ export default function RashifalSection() {
           {rasifalData.map((rashi) => (
             <Dialog key={rashi.rashi}>
               <DialogTrigger asChild>
-                <Card className="cursor-pointer transition-all duration-300 hover:shadow-2xl hover:scale-105 border-2 border-amber-200 hover:border-amber-400 bg-gradient-to-br from-white to-amber-50 group">
+                <Card className="cursor-pointer transition-all duration-300 hover:shadow-2xl hover:scale-105 border-2 border-saffron-light hover:border-saffron bg-gradient-to-br from-sacred-white to-saffron-light group">
                   <div className="flex  p-4 gap-4">
-                    <div className="w-12 h-12 flex-shrink-0 rounded-full bg-gradient-to-br from-amber-100 to-orange-200 flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
+                    <div className="w-12 h-12 flex-shrink-0 rounded-full gradient-gold flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
                       {getRashiIcon(rashi.rashi)}
                     </div>
                     <div className="flex-1 min-w-0">
                      
-                      <CardDescription className="text-sm text-amber-800 line-clamp-3 leading-relaxed">
-                         <span className="text-base font-bold text-amber-900 font-serif mr-2 ">
+                      <CardDescription className="text-sm text-earth-dark line-clamp-3 leading-relaxed">
+                         <span className="text-base font-bold text-saffron-darker font-devanagari mr-2 ">
                         {rashi.name}
                       </span>{rashi.description}
                       </CardDescription>
                       <div className="mt-3">
-                        <span className="text-xs text-amber-600 font-medium bg-amber-100 px-2 py-1 rounded-full">
+                        <span className="text-xs text-saffron-dark font-medium bg-saffron-light px-2 py-1 rounded-full">
                           विस्तार से देखें →
                         </span>
                       </div>
@@ -439,17 +439,17 @@ export default function RashifalSection() {
 
               </DialogTrigger>
 
-              <DialogContent className="overflow-hidden bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-200">
-                <DialogHeader className="border-b border-amber-200 pb-4">
+              <DialogContent className="overflow-hidden gradient-sacred border-2 border-saffron-light">
+                <DialogHeader className="border-b border-saffron-light pb-4">
                   <div className="flex items-center gap-4">
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-amber-200 to-orange-300 flex items-center justify-center shadow-lg">
+                    <div className="w-16 h-16 rounded-full gradient-gold flex items-center justify-center shadow-lg">
                       {getRashiIcon(rashi.rashi)}
                     </div>
                     <div>
-                      <DialogTitle className="text-3xl font-bold text-amber-900 font-serif">
+                      <DialogTitle className="text-3xl font-bold text-saffron-darker font-devanagari">
                         {rashi.name} राशिफल
                       </DialogTitle>
-                      <DialogDescription className="text-amber-700 text-lg mt-1">
+                      <DialogDescription className="text-earth-dark text-lg mt-1">
                         जनवरी 2025 - विस्तृत भविष्यफल
                       </DialogDescription>
                     </div>
@@ -459,18 +459,18 @@ export default function RashifalSection() {
                 <ScrollArea className="h-[60vh] pr-4">
                   <div className="space-y-6">
                     {/* Description */}
-                    <div className="p-4 bg-gradient-to-r from-amber-100 to-orange-100 rounded-lg border-l-4 border-amber-500">
-                      <h3 className="font-bold text-lg mb-3 text-amber-900 flex items-center gap-2">
+                    <div className="p-4 bg-gradient-to-r from-saffron-light to-gold-light rounded-lg border-l-4 border-saffron">
+                      <h3 className="font-bold text-lg mb-3 text-saffron-darker flex items-center gap-2">
                         <Star className="w-5 h-5" />
                         सामान्य विवरण
                       </h3>
-                      <p className="text-amber-800 leading-relaxed text-base">
+                      <p className="text-earth-dark leading-relaxed text-base">
                         {rashi.description}
                       </p>
                     </div>
 
                     <Tabs defaultValue="benefits" className="w-full">
-                      <TabsList className="grid w-full grid-cols-4 lg:grid-cols-9 gap-1 h-auto p-1 bg-amber-100">
+                      <TabsList className="grid w-full grid-cols-4 lg:grid-cols-9 gap-1 h-auto p-1 bg-saffron-light">
                         {[
                           "benefits",
                           "health",
@@ -485,7 +485,7 @@ export default function RashifalSection() {
                           <TabsTrigger
                             key={tab}
                             value={tab}
-                            className="flex flex-col items-center gap-1 p-3 text-xs data-[state=active]:bg-amber-600 data-[state=active]:text-white data-[state=active]:shadow-md transition-all"
+                            className="flex flex-col items-center gap-1 p-3 text-xs data-[state=active]:bg-saffron-dark data-[state=active]:text-sacred-white data-[state=active]:shadow-md transition-all"
                           >
                             {getTabIcon(tab)}
                             <span className="hidden sm:inline font-medium">
@@ -507,15 +507,15 @@ export default function RashifalSection() {
                         "overall",
                       ].map((tab) => (
                         <TabsContent key={tab} value={tab} className="mt-6">
-                          <Card className="border-amber-200 bg-gradient-to-br from-white to-amber-50">
-                            <CardHeader className="bg-gradient-to-r from-amber-100 to-orange-100 rounded-t-lg">
-                              <CardTitle className="flex items-center gap-3 text-xl text-amber-900">
+                          <Card className="border-saffron-light bg-gradient-to-br from-sacred-white to-saffron-light">
+                            <CardHeader className="gradient-gold rounded-t-lg">
+                              <CardTitle className="flex items-center gap-3 text-xl text-charcoal">
                                 {getTabIcon(tab)}
                                 {getTabLabel(tab)}
                               </CardTitle>
                             </CardHeader>
                             <CardContent className="pt-6">
-                              <p className="text-amber-800 leading-relaxed text-base">
+                              <p className="text-earth-dark leading-relaxed text-base">
                                 {rashi[tab as keyof typeof rashi]}
                               </p>
                             </CardContent>
@@ -531,13 +531,13 @@ export default function RashifalSection() {
         </div>
 
         {/* Footer */}
-        <div className="text-center mt-16 py-8 border-t border-amber-200">
+        <div className="text-center mt-16 py-8 border-t border-saffron-light">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <Star className="w-5 h-5 text-amber-500 fill-current" />
-            <Star className="w-6 h-6 text-amber-600 fill-current" />
-            <Star className="w-5 h-5 text-amber-500 fill-current" />
+            <Star className="w-5 h-5 text-saffron fill-current" />
+            <Star className="w-6 h-6 text-gold fill-current" />
+            <Star className="w-5 h-5 text-saffron fill-current" />
           </div>
-          <p className="text-amber-700 text-base font-medium">
+          <p className="text-earth-dark text-base font-medium font-devanagari">
             यह राशिफल केवल मनोरंजन के लिए है। महत्वपूर्ण निर्णयों के लिए
             विशेषज्ञ सलाह लें।
           </p>
