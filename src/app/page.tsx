@@ -85,14 +85,12 @@ export default function HomePage() {
           <p className="text-base md:text-xl text-muted-foreground mb-6 md:mb-8 max-w-2xl mx-auto px-4">
             पारंपरिक भारतीय कैलेंडर के साथ सभी धार्मिक तिथियों, त्योहार और शुभ मुहूर्त की संपूर्ण जानकारी प्राप्त करें
           </p>
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground w-full sm:w-auto">
-            कैलेंडर देखें
-          </Button>
+       
         </div>
       </section>
 
       {/* Month Navigation */}
-      <section className="py-12 md:py-16" id="months">
+      <section className="py-12 md:py-16 " id="months">
         <div className="container mx-auto px-4">
           <h3 className="font-playfair text-2xl md:text-3xl font-bold text-center text-foreground mb-8 md:mb-12">
             महीने चुनें

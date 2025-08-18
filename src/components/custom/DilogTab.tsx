@@ -57,15 +57,15 @@ export function DilogTab({
   monthName?: string;
 }) {
   return (
-    <div className="flex w-full h-full flex-col gap-4 sm:gap-6">
+    <div className="flex w-full h-full flex-col gap-4 sm:gap-6  px-0">
       <Tabs defaultValue="description">
-        <TabsList className="grid w-full grid-cols-2">
+        <TabsList className="grid  grid-cols-2 w-fit mx-auto md:mx-1">
           <TabsTrigger value="description">Description</TabsTrigger>
           <TabsTrigger value="todo">Todo</TabsTrigger>
         </TabsList>
-        <TabsContent value="description" className="h-full ">
-          <Card className=" bg-transparent border-none shadow-none">
-            <CardHeader className="p-4 sm:p-6 bg-gradient-to-r from-orange-50 via-yellow-50 to-red-50 dark:from-orange-950/30 dark:via-yellow-950/30 dark:to-red-950/30 ">
+        <TabsContent value="description" className="h-full p-0 ">
+          <Card className=" bg-transparent border-none shadow-none p-0">
+            <CardHeader className="py-4 px-0   bg-gradient-to-r from-orange-50 via-yellow-50 to-red-50 dark:from-orange-950/30 dark:via-yellow-950/30 dark:to-red-950/30 ">
               <div className="flex items-start gap-4">
                 {/* Thumbnail Image */}
                 {url && (
@@ -84,8 +84,8 @@ export function DilogTab({
                 <div className="flex-1 space-y-2">
                   <div className="flex items-start justify-between">
                     <div className="space-y-1">
-                      <CardTitle className="text-lg sm:text-xl md:text-2xl font-bold text-orange-700 dark:text-orange-400 flex items-center gap-2">
-                        <Sparkles className="h-5 w-5 sm:h-6 sm:w-6 text-yellow-500" />
+                      <CardTitle className="text-lg sm:text-xl md:text-2xl font-bold text-orange-700 dark:text-orange-400 flex items-center gap-2 px-0">
+                        {/* <Sparkles className="h-5 w-5 sm:h-6 sm:w-6 text-yellow-500" /> */}
                         {title}
                       </CardTitle>
                       <div className="flex items-center gap-2 text-orange-600 dark:text-orange-400">
@@ -95,13 +95,7 @@ export function DilogTab({
                         </span>
                       </div>
                     </div>
-                    <Badge
-                      variant="secondary"
-                      className="shrink-0 ml-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white border-0"
-                    >
-                      <Calendar className="h-3 w-3 mr-1" />
-                      Today
-                    </Badge>
+                   
                   </div>
                   <CardDescription className="text-sm sm:text-base text-muted-foreground">
                     {discription}
@@ -110,7 +104,7 @@ export function DilogTab({
               </div>
             </CardHeader>
 
-            <CardContent className="space-y-4 sm:space-y-6 p-4 sm:p-0">
+            <CardContent className="space-y-4 sm:space-y-6  sm:p-0 p-0">
               {/* Enhanced Date Information */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 mt-6 ">
                 <Card className="border-l-4 border-l-orange-500 bg-gradient-to-r from-orange-50 via-yellow-50 to-orange-50 dark:from-orange-950/20 dark:via-yellow-950/20 dark:to-orange-950/20 shadow-md">

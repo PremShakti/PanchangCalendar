@@ -256,13 +256,28 @@ const UserTextForm = () => {
             render={({ field }) => (
               <FormItem className=" h-full w-full  ">
                 <FormControl>
-                  <Textarea
+                  {/* <Textarea
                     placeholder={`Type your note for ${date}...`}
                     className="w-full h-[95%] resize-none min-h-[200px]"
                     maxLength={280}
                     disabled={isLoading}
                     {...field}
-                  />
+                  /> */}
+                       <Textarea
+                id="writing-area"
+                // value={text}
+                // onChange={(e) => setText(e.target.value)}
+                placeholder="Start writing here..."
+                className="min-h-96 bg-transparent border-none resize-none text-lg font-serif leading-8 text-gray-800 placeholder:text-gray-400 focus:ring-0 focus:outline-none"
+                style={{
+                  backgroundImage: `repeating-linear-gradient(
+                    transparent,
+                    transparent 31px,
+                    #e5e7eb 31px,
+                    #e5e7eb 32px
+                  )`,
+                }}
+              />
                 </FormControl>
                 <FormMessage />
               </FormItem>
