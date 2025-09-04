@@ -3,15 +3,13 @@ import {
   Dialog,
   DialogClose,
   DialogContent,
-  DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
 
-import UserTextForm from "../calander-sheet/UserTextForm";
-import FormTogeAndSubmitBtn from "./FormTogeAndSubmitBtn";
+
 import { DilogTab } from "./DilogTab";
 import Link from "next/link";
 
@@ -55,7 +53,7 @@ export function DilogCustom({
       <DialogTrigger asChild>
         <Link
           href={"?date=" + date}
-          className="shadow-none border-none rounded-none  h-full bg-transparent p-0 m-0  overflow-hidden"
+          className="shadow-none border-none rounded-none  h-full bg-transparent p-0 m-0  overflow-hidden "
         >
           {children}
         </Link>
@@ -83,7 +81,7 @@ export function DilogCustom({
             monthName={monthName}
           />
         </div>
-        <DialogFooter className="  ">
+        <DialogFooter >
           <DialogClose asChild>
             <Button variant="outline" className="w-full sm:w-auto">
               Close

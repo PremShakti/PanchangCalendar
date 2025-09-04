@@ -272,7 +272,7 @@ const CalanderSheet: React.FC<PageProps> = async ({ params, monthData }) => {
             return (
               <div
                 key={i}
-                className={` border border-stone-grey/30 p-1 md:p-2 ${
+                className={` border border-stone-grey/30 p-1 md:p-2  ${
                   dayName == "Sunday" ? "bg-kumkum-100 text-dark-brown" : "bg-saffron-50 text-dark-brown"
                 }`}
               >

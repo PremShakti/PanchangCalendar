@@ -64,12 +64,12 @@ export default function FestivalsSection({festival}: {festival: any[]}) {
       icon={<Calendar className="w-10 h-10 text-dark-brown fill-current" />}
       footerMessage="सभी त्योहारों को श्रद्धा और भक्ति के साथ मनाएं। समुदायिक एकता और पारिवारिक प्रेम को बढ़ावा दें।"
     >
-      {sortedHolidays.map((festival, index) => (
+      {sortedHolidays?.map((festival, index) => (
         <GridCard
           key={`${festival.date}-${index}`}
           title={festival.title}
           subtitle={formatShortDate(festival.date)}
-          icon={<Calendar className="w-6 h-6 text-white" />}
+          icon={<Calendar className="w-4 h-4 md:w-5 md:h-5 text-white" />}
           iconColor={getFestivalColor(index)}
           textColor={getFestivalTextColor(index)}
           dialogTitle={festival.title}
@@ -85,7 +85,7 @@ export default function FestivalsSection({festival}: {festival: any[]}) {
             <div className="flex items-center gap-2">
               <Badge
                 variant="secondary"
-                className="bg-saffron-200 text-saffron-800"
+                className="bg-saffron-200 text-saffron-800 py-1"
               >
                 {festival.type || "हिंदू त्योहार"}
               </Badge>

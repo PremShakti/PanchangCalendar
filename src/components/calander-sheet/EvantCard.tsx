@@ -32,7 +32,7 @@ const EvantCard: React.FC<EvantCardProps> = ({
 }) => {
   return (
     <div
-      className={`p-1 md:p-2 w-full h-full relative overflow-hidden bg-cover bg-center bg-no-repeat ${
+      className={`p-1  md:p-2 w-full h-full relative overflow-hidden bg-cover bg-center bg-no-repeat ${
         dayName == "Sunday" ? "bg-kumkum-100" : "bg-saffron-50"
       }`}
       style={{
@@ -51,15 +51,15 @@ const EvantCard: React.FC<EvantCardProps> = ({
             />
           </div>
         ) : (
-          <p className=" text-cream-white text-center w-full text-[9px] sm:text-[12px]  md:text-xl py-2 border rounded-md overflow-hidden bg-maroon-600/80 backdrop-blur-sm">
+          <p className=" text-cream-white text-center text-[9px] sm:text-[12px]  py-2 border  rounded-md overflow-hidden bg-maroon-600/80 backdrop-blur-sm px-2 w-[150px]">
             {title}
           </p>
         )}
       </div>
 
-      <div className="absolute top-1 left-1 rounded-full p-0 sm:p-2 sm:backdrop-blur-sm sm:bg-dark-brown/30 z-10">
+      <div className="absolute top-1 left-1 rounded-full p-0 sm:p-2 sm:backdrop-blur-sm sm:bg-dark-brown/30 z-10 ">
         {dateObj && (
-          <p className=" text-xs sm:text-sm lg:text-base text-cream-white font-bold">
+          <p className=" text-xs sm:text-sm lg:text-base text-cream-white ">
             {dayNumber}
           </p>
         )}

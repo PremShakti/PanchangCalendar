@@ -61,7 +61,7 @@ export default {
           "4": "hsl(var(--chart-4))",
           "5": "hsl(var(--chart-5))",
         },
-        
+
         // Traditional Indian Temple Colors
         saffron: {
           50: "hsl(var(--saffron-50))",
@@ -128,6 +128,14 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+    },
+     screens: {
+      xs: "420px", // 👈 starts applying at 320px
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
     },
   },
   plugins: [require("tailwindcss-animate")],

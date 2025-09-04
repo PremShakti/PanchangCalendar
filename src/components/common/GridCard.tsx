@@ -1,10 +1,7 @@
 "use client";
 
 import React from "react";
-import {
-  Card,
-  CardDescription,
-} from "@/components/ui/card";
+import { Card, CardDescription } from "@/components/ui/card";
 import {
   Dialog,
   DialogContent,
@@ -36,7 +33,7 @@ export default function GridCard({
   textColor,
   dialogTitle,
   dialogSubtitle,
-  children
+  children,
 }: GridCardProps) {
   return (
     <Dialog>
@@ -44,7 +41,7 @@ export default function GridCard({
         <Card className="cursor-pointer transition-all duration-300 hover:shadow-2xl hover:scale-105 border-2 border-saffron-200 hover:border-saffron-500 bg-gradient-to-br from-cream-white to-warm-beige group">
           <div className="flex p-4 gap-4">
             <div
-              className={`w-12 h-12 flex-shrink-0 rounded-full ${iconColor} flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow`}
+              className={`w-10 h-10 flex-shrink-0 rounded-full ${iconColor}  items-center justify-center shadow-md group-hover:shadow-lg transition-shadow  hidden sm:flex`}
             >
               {icon}
             </div>
@@ -79,7 +76,9 @@ export default function GridCard({
       <DialogContent className="overflow-hidden gradient-sacred border-2 border-saffron-500 h-[95vh] flex flex-col gap-4 p-0">
         <DialogHeader className="border-b border-saffron-200 md:p-4">
           <div className="flex md:items-center gap-4">
-            <div className={`w-10 h-10 md:w-16 md:h-16 rounded-full ${iconColor} flex items-center justify-center shadow-lg`}>
+            <div
+              className={`w-10 h-10 md:w-16 md:h-16 rounded-full ${iconColor} flex items-center justify-center shadow-lg`}
+            >
               <div className="w-6 h-6 md:w-8 md:h-8 text-white flex items-center justify-center">
                 {icon}
               </div>
@@ -96,9 +95,7 @@ export default function GridCard({
         </DialogHeader>
 
         <ScrollArea className="h-full p-4">
-          <div className="space-y-6">
-            {children}
-          </div>
+          <div className="space-y-6">{children}</div>
         </ScrollArea>
       </DialogContent>
     </Dialog>
